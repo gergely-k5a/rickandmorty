@@ -1,0 +1,26 @@
+@use 'sass:map';
+@use '@picocss/pico/scss/pico' as * with (
+  $theme-color: 'indigo',
+  $semantic-root-element: '#root',
+  $enable-semantic-container: true
+);
+
+.error {
+  background-color: var(--pico-form-element-invalid-active-border-color);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination button,
+.pagination span {
+  margin: 0 5px;
+}
+
+.profile-card {
+  display: flex;
+  gap: var(--pico-block-spacing-horizontal);
+}
