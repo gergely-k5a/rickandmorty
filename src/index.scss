@@ -9,6 +9,10 @@
   background-color: var(--pico-form-element-invalid-active-border-color);
 }
 
+.loader {
+  min-height: 12rem;
+}
+
 .pagination {
   display: flex;
   align-items: center;

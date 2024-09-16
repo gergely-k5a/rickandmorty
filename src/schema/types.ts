@@ -10,13 +10,6 @@ export type Character = {
   origin: Location;
 };
 
-export type CharacterInfo = {
-  count: number;
-  pages: number;
-  next: string;
-  prev: string;
-};
-
 export type CharacterResponse = {
   characters: {
     info: CharacterInfo;
@@ -24,14 +17,21 @@ export type CharacterResponse = {
   };
 };
 
-export type Location = {
+type CharacterInfo = {
+  count: number;
+  pages: number;
+  next: string;
+  prev: string;
+};
+
+type Location = {
   id: number;
   name: string;
   type: string;
   dimension: string;
 };
 
-export type Episode = {
+type Episode = {
   id: number;
   name: string;
   episode: string;

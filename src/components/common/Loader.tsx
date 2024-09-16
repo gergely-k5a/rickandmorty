@@ -5,7 +5,7 @@ type LoaderProps = {
 };
 
 const Loader = ({ loading, children }: PropsWithChildren<LoaderProps>) => (
-  <div aria-busy={loading} className="loader">
+  <div aria-busy={loading} data-testid="loader" className="loader">
     {!loading && children}
   </div>
 );

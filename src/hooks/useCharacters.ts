@@ -1,28 +1,13 @@
 import { useState, useEffect } from 'react';
-import { useQuery, gql } from '@apollo/client';
-import { Character, CharacterResponse } from '../components/types';
+import { useQuery } from '@apollo/client';
+import { Character } from '../schema/types';
+import { CharacterResponse } from '../schema/types';
+import { GET_CHARACTERS } from '../schema/queries';
 
 type UseCharactersProps = {
   page: number;
   name: string;
 };
-
-const GET_CHARACTERS = gql`
-  query GetCharacters($page: Int!, $name: String!) {
-    characters(page: $page, filter: { name: $name }) {
-      results {
-        id
-        name
-        image
-        species
-        status
-      }
-      info {
-        pages
-      }
-    }
-  }
-`;
 
 const useCharacters = ({ page, name }: UseCharactersProps) => {
   const [characters, setCharacters] = useState<Character[]>([]);

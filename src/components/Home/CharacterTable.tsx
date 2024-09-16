@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
-import { Character } from './types';
+import { Character } from '../../schema/types';
 
 type CharacterTableProps = {
   characters: Character[];
 };
 
 const CharacterTable = ({ characters }: CharacterTableProps) => (
-  <table className="table">
+  <table className="table striped">
     <thead>
       <tr>
         <th>Avatar</th>

@@ -4,12 +4,15 @@ import { ApolloProvider } from '@apollo/client';
 import App from './App.tsx';
 import client from './apolloClient.ts';
 import './index.scss';
+import { StateProvider } from './components/common/StateContext.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <main>
       <ApolloProvider client={client}>
-        <App />
+        <StateProvider>
+          <App />
+        </StateProvider>
       </ApolloProvider>
     </main>
   </StrictMode>

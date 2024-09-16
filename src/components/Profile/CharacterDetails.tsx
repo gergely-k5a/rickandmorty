@@ -1,4 +1,4 @@
-import { Character } from './types';
+import { Character } from '../../schema/types';
 
 type CharacterDetailsProps = {
   character: Character;
